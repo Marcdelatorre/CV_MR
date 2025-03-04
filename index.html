@@ -1,64 +1,61 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprende Idiomas</title>
-    <link href="style.css" rel="stylesheet">
-    <script src="scripts.js" defer></script>
+    <title>Mein CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        h1 {
+            color: #333;
+        }
+        .pdf-container {
+            width: 100%;
+            max-width: 100%;
+            height: 90vh;
+            border: none;
+            background-color: white;
+        }
+        .download-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .download-link:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .pdf-container {
+                height: 80vh;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="inicio">
-        <h1>Bienvenido a Aprende Idiomas</h1>
-        <p>Tu plataforma para dominar nuevos idiomas de manera efectiva.</p>
-    </section>
+    <h1>Mein Lebenslauf</h1>
+    
+    <!-- Möglichkeit A: PDF direkt im Repository -->
+    <iframe class="pdf-container" src="lebenslauf.pdf"></iframe>
 
-    <section id="cursos">
-        <h2>Cursos Disponibles</h2>
-        <div class="curso">
-            <h3>Inglés para Principiantes</h3>
-            <p>Comienza tu viaje en el aprendizaje del inglés con lecciones interactivas.</p>
-            <a href="#">Más Información</a>
-        </div>
-        <div class="curso">
-            <h3>Francés Intermedio</h3>
-            <p>Mejora tus habilidades en francés con ejercicios prácticos y tutorías.</p>
-            <a href="#">Más Información</a>
-        </div>
-        <!-- Agrega más cursos según sea necesario -->
-    </section>
+    <!-- Möglichkeit B: PDF aus Google Drive (ersetze die Datei-ID) -->
+    <!-- <iframe class="pdf-container" src="https://drive.google.com/file/d/DEINE-DATEI-ID/preview"></iframe> -->
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form action="enviar_formulario.php" method="post">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+    <!-- Download-Link -->
+    <p>
+        <a class="download-link" href="lebenslauf.pdf" download>📥 CV herunterladen</a>
+    </p>
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Aprende Idiomas. Todos los derechos reservados.</p>
-    </footer>
 </body>
-
 </html>
